@@ -1,7 +1,5 @@
 # Round 2!
-It's a sunny day you look out the window and yell:
-
-> Hello World!
+Oh ow little Johnny was playing in the garden when he fell on his head, now he says everything backwards. Can you help him?
 
 
 

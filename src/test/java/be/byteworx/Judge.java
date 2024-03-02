@@ -2,7 +2,7 @@ package be.byteworx;
 
 import be.byteworx.round0.RoundZero;
 import be.byteworx.round1.RoundOne;
-import org.junit.jupiter.api.BeforeEach;
+import be.byteworx.round2.RoundTwo;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.ReflectionUtils;
@@ -12,21 +12,17 @@ import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Base64;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class Judge {
 
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
-
-    @BeforeEach
-    public void setUp() {
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
-
     @Test
     @DisplayName("Round0: Can you say hello to the world?")
     void round0Test() {
+        System.setOut(new PrintStream(outputStreamCaptor));
         RoundZero roundZero = new RoundZero();
         roundZero.sayHelloToTheWorld();
 
@@ -48,5 +44,13 @@ class Judge {
             }
             fail(failMessage);
         });
+    }
+
+    @Test
+    @DisplayName("Round2: Poor little Johnny! Can you help him out?")
+    void round2Test() {
+        String failMessage = "You have to talk some sense into Johnny";
+        RoundTwo roundTwo = new RoundTwo();
+        assertEquals("I was playing in the garden when suddenly I tripped and landed on my head. Boy does my head feel funny.", roundTwo.iHaveDrainBamage().trim(), failMessage);
     }
 }
