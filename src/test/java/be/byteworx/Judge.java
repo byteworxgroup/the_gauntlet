@@ -51,6 +51,6 @@ class Judge {
     void round2Test() {
         String failMessage = "You have to talk some sense into Johnny";
         RoundTwo roundTwo = new RoundTwo();
-        assertEquals("I was playing in the garden when suddenly I tripped and landed on my head. Boy does my head feel funny.", roundTwo.iHaveDrainBamage().trim(), failMessage);
+        assertEquals("I was playing when suddenly I tripped and hit my head. Boy does my head feel funny.", roundTwo.iHaveDrainBamage().trim(), failMessage);
     }
 }
