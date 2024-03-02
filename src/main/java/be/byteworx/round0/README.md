@@ -1,5 +1,5 @@
 # Round 0!
-**It's a sunny day you look out the window and yell:**
+**It's a sunny day you go for a walk and say hello to the world:**
 
 > Hello World!
 > 
