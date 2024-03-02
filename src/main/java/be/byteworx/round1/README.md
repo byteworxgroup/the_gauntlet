@@ -1,7 +1,6 @@
 # Round 1!
-It's a sunny day you look out the window and yell:
+Mister java makes a mean bolognaise he does not want other classes to use his family recipe.
 
-> Hello World!
 
 
 
