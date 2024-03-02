@@ -1,5 +1,4 @@
 package be.byteworx.round3;
-
 public class RoundThree {
 
     public String drinkingSchedule(int day) {
