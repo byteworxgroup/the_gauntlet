@@ -1,6 +1,6 @@
-package be.byteworx.round0;
+package be.byteworx.challenge0;
 
-public class RoundZero {
+public class ChallengeZero {
 
     public void sayHelloToTheWorld() {
         //todo: implement this method

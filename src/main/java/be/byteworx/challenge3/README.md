@@ -1,4 +1,4 @@
-# Round 3!
+# Challenge 3!
 
 **Johnny likes a night out on the town as much as the next guy, but he does not want to get buzzed every time he goes out, so he comes up with some rules**
 

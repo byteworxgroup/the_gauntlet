@@ -1,5 +1,5 @@
-package be.byteworx.round2;
-public class RoundTwo {
+package be.byteworx.challenge2;
+public class ChallengeTwo {
 
     public static String JOHNNY_SAYS = """
             .ynnuf leef daeh ym seod yoB .daeh ym tih dna deppirt I ylneddus nehw gniyalp saw I

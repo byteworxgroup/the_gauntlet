@@ -1,9 +1,10 @@
 package be.byteworx;
 
-import be.byteworx.round0.RoundZero;
-import be.byteworx.round1.RoundOne;
-import be.byteworx.round2.RoundTwo;
-import be.byteworx.round3.RoundThree;
+import be.byteworx.challenge0.ChallengeZero;
+import be.byteworx.challenge1.ChallengeOne;
+import be.byteworx.challenge2.ChallengeTwo;
+import be.byteworx.challenge3.ChallengeThree;
+import be.byteworx.challenge4.ChallengeFour;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.ReflectionUtils;
@@ -21,23 +22,23 @@ class Judge {
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
     @Test
-    @DisplayName("Round0: Can you say hello to the world?")
-    void round0Test() {
+    @DisplayName("Challenge0: Can you say hello to the world?")
+    void challenge0Test() {
         System.setOut(new PrintStream(outputStreamCaptor));
-        RoundZero roundZero = new RoundZero();
-        roundZero.sayHelloToTheWorld();
+        ChallengeZero challengeZero = new ChallengeZero();
+        challengeZero.sayHelloToTheWorld();
 
         assertEquals("SGVsbG8gV29ybGQh", Base64.getEncoder().encodeToString(outputStreamCaptor.toString().trim().getBytes()));
     }
 
     @Test
-    @DisplayName("Round1: The first rule of bolognaise club is?")
-    void round1Test() {
+    @DisplayName("Challenge1: The first rule of bolognaise club is?")
+    void challenge1Test() {
         String failMessage = "Oh ow your next door neighbour vincenzo is happy with your bolognaise";
-        RoundOne roundOne = new RoundOne();
-        ReflectionUtils.findMethod(RoundOne.class, "theSecretSauce").ifPresent(method -> {
+        ChallengeOne challengeOne = new ChallengeOne();
+        ReflectionUtils.findMethod(ChallengeOne.class, "theSecretSauce").ifPresent(method -> {
             try {
-                method.invoke(roundOne);
+                method.invoke(challengeOne);
             } catch (IllegalAccessException e) {
                 return;
             } catch (InvocationTargetException e) {
@@ -48,23 +49,34 @@ class Judge {
     }
 
     @Test
-    @DisplayName("Round2: Poor little Johnny! Can you help him out?")
-    void round2Test() {
+    @DisplayName("Challenge2: Poor little Johnny! Can you help him out?")
+    void challenge2Test() {
         String failMessage = "You have to talk some sense into Johnny";
-        RoundTwo roundTwo = new RoundTwo();
-        assertEquals("I was playing when suddenly I tripped and hit my head. Boy does my head feel funny.", roundTwo.iHaveDrainBamage().trim(), failMessage);
+        ChallengeTwo challengeTwo = new ChallengeTwo();
+        assertEquals("I was playing when suddenly I tripped and hit my head. Boy does my head feel funny.", challengeTwo.iHaveDrainBamage().trim(), failMessage);
     }
 
     @Test
-    @DisplayName("Round3: To drink or not to drink? That is the question!")
-    void round3Test() {
-        String daySchedule = new RoundThree().drinkingSchedule(15);
+    @DisplayName("Challenge3: To drink or not to drink? That is the question!")
+    void challenge3Test() {
+        String daySchedule = new ChallengeThree().drinkingSchedule(15);
         assertEquals("FIZZY BUZZED", daySchedule);
-        daySchedule = new RoundThree().drinkingSchedule(3);
+        daySchedule = new ChallengeThree().drinkingSchedule(3);
         assertEquals("BUZZED", daySchedule);
-        daySchedule = new RoundThree().drinkingSchedule(5);
+        daySchedule = new ChallengeThree().drinkingSchedule(5);
         assertEquals("FIZZY", daySchedule);
-        daySchedule = new RoundThree().drinkingSchedule(1);
+        daySchedule = new ChallengeThree().drinkingSchedule(1);
         assertEquals("STAYING IN", daySchedule);
+    }
+
+    @Test
+    @DisplayName("Challenge4: Sing me your sweet song fibonacci!")
+    void challenge4Test() {
+        String failMessage = "You have to sing me the fibonacci song";
+        ChallengeFour challengeFour = new ChallengeFour();
+        assertEquals("[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]", challengeFour.fibonacci(60).toString(), failMessage);
+        assertEquals("[]", challengeFour.fibonacci(0).toString(), failMessage);
+        assertEquals("[0]", challengeFour.fibonacci(1).toString(), failMessage);
+        assertEquals("[0, 1]", challengeFour.fibonacci(2).toString(), failMessage);
     }
 }

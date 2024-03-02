@@ -1,8 +1,8 @@
-package be.byteworx.round1;
+package be.byteworx.challenge1;
 
 import java.util.List;
 
-public class RoundOne {
+public class ChallengeOne {
 
     //TODO: make a change to this method to hide the secret sauce from other pesky classes
     public String theSecretSauce() {

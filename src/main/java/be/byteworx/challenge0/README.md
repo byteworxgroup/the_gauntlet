@@ -1,4 +1,4 @@
-# Round 0!
+# Challenge 0!
 **It's a sunny day you go for a walk and say hello to the world:**
 
 > Hello World!
