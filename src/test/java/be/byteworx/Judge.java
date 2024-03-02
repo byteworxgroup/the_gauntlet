@@ -5,6 +5,7 @@ import be.byteworx.challenge1.ChallengeOne;
 import be.byteworx.challenge2.ChallengeTwo;
 import be.byteworx.challenge3.ChallengeThree;
 import be.byteworx.challenge4.ChallengeFour;
+import be.byteworx.challenge5.ChallengeFive;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.ReflectionUtils;
@@ -14,8 +15,7 @@ import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Base64;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Judge {
 
@@ -78,5 +78,14 @@ class Judge {
         assertEquals("[]", challengeFour.fibonacci(0).toString(), failMessage);
         assertEquals("[0]", challengeFour.fibonacci(1).toString(), failMessage);
         assertEquals("[0, 1]", challengeFour.fibonacci(2).toString(), failMessage);
+    }
+
+    @Test
+    @DisplayName("Challenge5: Can little Johnny trust this number?")
+    void challenge5Test() {
+        String failMessage = "That number is not trustworthy";
+        ChallengeFive challengeFive = new ChallengeFive();
+        assertTrue(challengeFive.palindrome(1000001), failMessage);
+        assertFalse(challengeFive.palindrome(1000002), failMessage);
     }
 }
