@@ -3,6 +3,7 @@ package be.byteworx;
 import be.byteworx.round0.RoundZero;
 import be.byteworx.round1.RoundOne;
 import be.byteworx.round2.RoundTwo;
+import be.byteworx.round3.RoundThree;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.ReflectionUtils;
@@ -52,5 +53,18 @@ class Judge {
         String failMessage = "You have to talk some sense into Johnny";
         RoundTwo roundTwo = new RoundTwo();
         assertEquals("I was playing when suddenly I tripped and hit my head. Boy does my head feel funny.", roundTwo.iHaveDrainBamage().trim(), failMessage);
+    }
+
+    @Test
+    @DisplayName("Round3: To drink or not to drink? That is the question!")
+    void round3Test() {
+        String daySchedule = new RoundThree().drinkingSchedule(15);
+        assertEquals("FIZZY BUZZED", daySchedule);
+        daySchedule = new RoundThree().drinkingSchedule(3);
+        assertEquals("BUZZED", daySchedule);
+        daySchedule = new RoundThree().drinkingSchedule(5);
+        assertEquals("FIZZY", daySchedule);
+        daySchedule = new RoundThree().drinkingSchedule(1);
+        assertEquals("STAYING IN", daySchedule);
     }
 }
