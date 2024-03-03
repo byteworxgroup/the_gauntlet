@@ -7,6 +7,9 @@ import be.byteworx.challenge3.ChallengeThree;
 import be.byteworx.challenge4.ChallengeFour;
 import be.byteworx.challenge5.ChallengeFive;
 import be.byteworx.challenge6.ChallengeSix;
+import be.byteworx.challenge7.ChallengeSeven;
+import be.byteworx.challenge8.ChallengeEight;
+import be.byteworx.challenge9.ChallengeNine;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.ReflectionUtils;
@@ -14,10 +17,13 @@ import org.junit.platform.commons.util.StringUtils;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static be.byteworx.challenge9.ChallengeNine.readFromInputStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChallengeTests {
@@ -120,6 +126,34 @@ class ChallengeTests {
         ChallengeSix challengeSix = new ChallengeSix();
         assertTrue(challengeSix.palindrome(1000001), failMessage);
         assertFalse(challengeSix.palindrome(1000002), failMessage);
+    }
+
+    @Test
+    @DisplayName("Challenge7: Can you make sure the gifts are unique?")
+    void challenge7Test() {
+        List<String> gifts = List.of("Pony", "Playstation", "Usb stick", "Pony");
+        String failMessage = "Looks like you missed one";
+        ChallengeSeven challengeSeven = new ChallengeSeven();
+        assertLinesMatch(List.of("Playstation", "Pony", "Usb stick"),new ArrayList<>(challengeSeven.imSpecial(gifts)), failMessage);
+    }
+
+    @Test
+    @DisplayName("Challenge8: What was the count again?")
+    void challenge8Test() {
+        String failMessage = "2+1 is 4?";
+        ChallengeEight challengeEight = new ChallengeEight();
+        assertEquals(6,challengeEight.longestContinuingNumberChain(List.of(1,5,8,3,4,1,2,3,4,5,6,8)), failMessage);
+        assertEquals(3,challengeEight.longestContinuingNumberChain(List.of(1,2,3,1,4,2,4,2,4,2)), failMessage);
+        assertEquals(3,challengeEight.longestContinuingNumberChain(List.of(1,4,2,4,2,4,2,1,2,3)), failMessage);
+    }
+
+    @Test
+    @DisplayName("Challenge9: most efficient sort")
+    void challenge9Test() throws IOException {
+        String failMessage = "Thats not quit right";
+        ChallengeNine challengeNine = new ChallengeNine();
+        Integer[] expected = readFromInputStream(getClass().getResourceAsStream("/expected.txt"));
+        assertEquals(Arrays.toString(expected), Arrays.toString(challengeNine.sortingTime()), failMessage);
     }
 
     private List<String> readOutput(InputStream inputStream) throws IOException {
