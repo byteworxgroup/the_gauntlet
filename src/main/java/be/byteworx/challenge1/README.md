@@ -1,4 +1,6 @@
 # Challenge 1!
-**Mister Java makes a mean bolognaise he does not want other classes to use his family recipe.**
+**It's a sunny day you go for a walk and say hello to the world:**
 
-![enter image description here](https://i.makeagif.com/media/4-12-2017/3jn1Jn.gif)
+> Hello World!
+> 
+![enter image description here](https://media1.tenor.com/m/WDp1uPrjWWEAAAAC/sound-of-music-guns.gif)

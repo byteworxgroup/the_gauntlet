@@ -1,4 +1,4 @@
 # Challenge 2!
-Oh ow little Johnny was playing when he hit his head, now he says everything backwards. Can you help him?
+**Mister Java makes a mean bolognaise he does not want other classes to use his family recipe.**
 
-![enter image description here](https://media.tenor.com/6PpdsejkWnwAAAAM/hit-head-on-oops.gif)
+![enter image description here](https://i.makeagif.com/media/4-12-2017/3jn1Jn.gif)

@@ -1,7 +1,11 @@
 package be.byteworx.challenge5;
 
+import java.util.List;
+
 public class ChallengeFive {
-    public boolean palindrome(int number) {
-        return false;
+
+    public List<Integer> fibonacci(int upperLimit) {
+        //TODO: return a list of fibonacci numbers smaller than the upperLimit
+        return List.of();
     }
 }

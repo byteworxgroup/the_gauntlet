@@ -1,11 +1,12 @@
 package be.byteworx.challenge2;
+
+import java.util.List;
+
 public class ChallengeTwo {
 
-    public static String JOHNNY_SAYS = """
-            .ynnuf leef daeh ym seod yoB .daeh ym tih dna deppirt I ylneddus nehw gniyalp saw I
-            """;
-    public String iHaveDrainBamage() {
-        //TODO: talk some sense into Johnny
-        return JOHNNY_SAYS;
+    //TODO: make a change to this method to hide the secret sauce from other pesky classes
+    public String theSecretSauce() {
+        List<String> ingredients = List.of("sugar", "spice", "everything nice");
+        return String.join(", ", ingredients);
     }
 }

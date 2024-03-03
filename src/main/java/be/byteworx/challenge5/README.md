@@ -1,8 +1,18 @@
-
 # Challenge 5!
-Looks like Johnny's braindamage is getting worse, now he can't even remember his grandma's phone number anymore.  
-Luckily he knows some smart devs that can write him a program that can tell him if the number will be problematic or not.
 
-Example: 383383383 is not problematic because it is a palindrome, 383383384 is problematic because it is not a palindrome.
+The IT department had a really nice idea we should start scoring features by complexity.  
+Unfortunately the devs keep forgetting the fibonacci sequence. Can you help them out?  
+Example: 0, 1, 2, 3, 5, 8, 13, 21
+Write a method that prints out all the numbers of the fibonacci sequence until the number exceeds a max range:
+fibList(n) where max fib number in list is smaller than n
 
-![enter image description here](https://www.icegif.com/wp-content/uploads/2023/02/icegif-34.gif)
+
+![enter image description here](https://media.tenor.com/Hmiy4t7RM_UAAAAM/italian-hand-fancy.gif)
+
+
+
+
+
+
+
+

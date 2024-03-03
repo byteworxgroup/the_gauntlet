@@ -1,8 +1,11 @@
 package be.byteworx.challenge3;
 public class ChallengeThree {
 
-    public String drinkingSchedule(int day) {
-        //TODO: print out the drinking schedule (BUZZED, FIZZY, FIZZY BUZZED, STAYING IN) for the year
-        return "";
+    public static String JOHNNY_SAYS = """
+            .ynnuf leef daeh ym seod yoB .daeh ym tih dna deppirt I ylneddus nehw gniyalp saw I
+            """;
+    public String iHaveDrainBamage() {
+        //TODO: talk some sense into Johnny
+        return JOHNNY_SAYS;
     }
 }

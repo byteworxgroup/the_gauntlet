@@ -1,6 +1,6 @@
 # Challenge 0!
-**It's a sunny day you go for a walk and say hello to the world:**
+**Damn the copier is broken again. We can't use the original. Do you know a way to create your own version of this code?**
 
-> Hello World!
-> 
-![enter image description here](https://media1.tenor.com/m/WDp1uPrjWWEAAAAC/sound-of-music-guns.gif)
+**hint: git going and BRANCH it**
+
+![enter image description here](https://i.gifer.com/7h7L.gif)
