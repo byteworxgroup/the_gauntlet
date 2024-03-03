@@ -27,7 +27,6 @@ class ChallengeTests {
     @Test
     @DisplayName("Challenge0: Can you say hello to the world?")
     void challenge0Test() throws IOException, InterruptedException {
-        System.setOut(new PrintStream(outputStreamCaptor));
         ChallengeZero challengeZero = new ChallengeZero();
         String branch = challengeZero.branchName();
         if(branch == null || branch.trim().equals("")) {
