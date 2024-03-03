@@ -25,12 +25,15 @@ class ChallengeTests {
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
     @Test
-    @DisplayName("Challenge0: Can you say hello to the world?")
+    @DisplayName("Challenge0: Can you fix the copier?")
     void challenge0Test() throws IOException, InterruptedException {
         ChallengeZero challengeZero = new ChallengeZero();
         String branch = challengeZero.branchName();
         if(branch == null || branch.trim().equals("")) {
             fail("We need to name our copy something");
+        }
+        if(branch.length()<5 || !branch.contains("-")) {
+            fail("Our branch names have to be longer than 5 and be in the format FIRSTNAME-LASTNAME");
         }
         ProcessBuilder processBuilder = new ProcessBuilder("git", "branch", "-a");
         processBuilder.redirectErrorStream(true);
@@ -48,7 +51,7 @@ class ChallengeTests {
                 break;
             }
         }
-        assertTrue(found ,"Oh ow the copier is still not working it seems");
+        assertTrue(found ,"Oh ow we can't seem to find your copy. Did we drop it somewhere?");
 
     }
     @Test
