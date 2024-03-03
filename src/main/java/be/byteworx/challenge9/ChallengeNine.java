@@ -16,7 +16,9 @@ public class ChallengeNine {
 
     public Integer[] sortingTime() {
         long start = System.nanoTime();
-        //TODO: implement your sort here
+
+        Arrays.sort(nums);
+
         long end = System.nanoTime();
         System.out.println("Sorting time (lower is better): " + (end - start));
         return nums;

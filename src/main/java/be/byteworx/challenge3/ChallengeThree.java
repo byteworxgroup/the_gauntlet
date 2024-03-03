@@ -6,6 +6,7 @@ public class ChallengeThree {
             """;
     public String iHaveDrainBamage() {
         //TODO: talk some sense into Johnny
-        return JOHNNY_SAYS;
+        StringBuilder stringBuilder = new StringBuilder(JOHNNY_SAYS);
+        return stringBuilder.reverse().toString();
     }
 }

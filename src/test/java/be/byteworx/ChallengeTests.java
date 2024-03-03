@@ -116,7 +116,7 @@ class ChallengeTests {
         assertEquals("[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]", challengeFive.fibonacci(60).toString(), failMessage);
         assertEquals("[]", challengeFive.fibonacci(0).toString(), failMessage);
         assertEquals("[0]", challengeFive.fibonacci(1).toString(), failMessage);
-        assertEquals("[0, 1]", challengeFive.fibonacci(2).toString(), failMessage);
+        assertEquals("[0, 1, 1]", challengeFive.fibonacci(2).toString(), failMessage);
     }
 
     @Test
