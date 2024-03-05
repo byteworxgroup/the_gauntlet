@@ -128,6 +128,7 @@ class ChallengeTests {
         assertFalse(challengeSix.palindrome(1000002), failMessage);
     }
 
+
     @Test
     @DisplayName("Challenge7: Can you make sure the gifts are unique?")
     void challenge7Test() {
